@@ -15,7 +15,7 @@ services:
       driver: "json-file"
       options:
         max-size: "10m"
-        max-files: "3"
+        max-file: "3"
 
   nginx:
     image: nginx:1.27-alpine
@@ -33,7 +33,7 @@ services:
       driver: "json-file"
       options:
         max-size: "5m"
-        max-files: "3"
+        max-file: "3"
 
 networks:
   tgnet:
