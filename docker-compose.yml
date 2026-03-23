@@ -1,0 +1,40 @@
+services:
+  terraguard:
+    build: .
+    container_name: terraguard
+    env_file: .env
+    restart: unless-stopped
+    networks:
+      - tgnet
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+          cpus: "1.0"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-files: "3"
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: terraguard-nginx
+    ports:
+      - "8001:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - terraguard
+    restart: unless-stopped
+    networks:
+      - tgnet
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "5m"
+        max-files: "3"
+
+networks:
+  tgnet:
+    driver: bridge
