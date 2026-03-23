@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Shield background -->
+  <path d="M100 10 L180 45 L180 100 C180 145 145 175 100 190 C55 175 20 145 20 100 L20 45 Z"
+        fill="#0d1b2a" stroke="#00c8c8" stroke-width="3"/>
+
+  <!-- Topography lines (terrain contours) -->
+  <path d="M50 120 Q65 105 80 115 Q95 125 110 108 Q125 92 150 100" fill="none" stroke="#00c8c8" stroke-width="2" opacity="0.5"/>
+  <path d="M45 135 Q65 118 85 128 Q105 138 122 118 Q138 100 155 110" fill="none" stroke="#00c8c8" stroke-width="2" opacity="0.4"/>
+  <path d="M55 108 Q70 92 88 102 Q106 112 120 95 Q134 78 152 88" fill="none" stroke="#00c8c8" stroke-width="2" opacity="0.35"/>
+  <path d="M62 95 Q78 80 95 90 Q112 100 126 82 Q140 65 156 75" fill="none" stroke="#00c8c8" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Shield icon / lock -->
+  <rect x="83" y="62" width="34" height="26" rx="4" fill="none" stroke="#00c8c8" stroke-width="2.5"/>
+  <path d="M90 62 Q90 48 100 48 Q110 48 110 62" fill="none" stroke="#00c8c8" stroke-width="2.5"/>
+  <circle cx="100" cy="76" r="4" fill="#00c8c8"/>
+  <rect x="98" y="76" width="4" height="7" rx="2" fill="#00c8c8"/>
+
+  <!-- TG text -->
+  <text x="100" y="163" font-family="monospace" font-size="16" font-weight="bold"
+        fill="#00c8c8" text-anchor="middle" letter-spacing="4">TG</text>
+</svg>
